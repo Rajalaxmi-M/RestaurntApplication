@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<style>
+			input[type=text], select 
+			{
+   				width: 82%;
+    			padding: 8px 10px;
+    			margin: 8px 0;
+    			display: inline-block;
+    			border: 1px solid #ccc;
+    			border-radius: 6px;
+    			box-sizing: border-box;
+			}
+			input[type=password], select 
+			{
+   				width: 82%;
+    			padding: 8px 10px;
+    			margin: 8px 0;
+    			display: inline-block;
+    			border: 1px solid #ccc;
+    			border-radius: 6px;
+    			box-sizing: border-box;
+			}
+			input[type=submit] , input[type=reset]	{
+    			width: 82%;
+    			color: white;
+    			padding: 9px 10px;
+   				margin: 8px 0;
+  				border: none;
+   				cursor: pointer;
+			}								
+		</style>
+ 
+</head>
+	<body style="background-color:#FFFFFF;"><br><br><br>
+		<table align="center">
+			<tr>
+				<th>
+					<img src="Files/logo.jpg" height=150 width=200></img>
+				</th>
+			</tr>
+		</table>
+		<table width="350" height="320" align="center" style="background-color:#aa80ff ;border-radius:10px;">
+			<tr>
+				<td>
+					<center><font size="5" color=" #000000" face="Imprint MT Shadow">Restaurant Application</font><br>
+					<form action="" method="post">
+						<input type="text" name="uname" id="uid" placeholder="UserId..." required /><br>
+						<input type="password" name="pass" id="pass" placeholder="Password..." required /><br>
+						<input type="text" name="name" id="name" placeholder="Name..." required /><br>
+						<input type="text" name="mobile" id="mobile" placeholder="Mobile Number..." required /><br>
+						<input type="text" name="city" id="city" placeholder="City..." required /><br>
+						<input type="submit" name="login" value="Sign In" id="c" onclick="location.href='products.html'" style="background-color: #ef3071;" /><br>
+						<input type="reset" name="res" value="Reset"  style="background-color: #19004d;" /><br>
+					</form>
+					
+					</center>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+document.getElementById("c").addEventListener("click",()=>{
+var uid=document.getElementById("uid").value;
+var pass=document.getElementById("pass").value;
+var name=document.getElementById("name").value;
+var mobile=document.getElementById("mobile").value;
+var city=document.getElementById("city").value;
+$.ajax({
+	url:"http://localhost:3000/insertnewcustomer",
+	type:"post",
+	data:{userid:uid,password:pass,name:name,mobile:mobile,city:city},
+	dataType:"json"
+	
+}).done((res)=>{
+console.log(res);
+})
+
+})
+
+</script>

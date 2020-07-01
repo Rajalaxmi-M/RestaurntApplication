@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Create_Admin</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="mdfiles/css/bootstrap.min.css">
+	  	<link rel="stylesheet" href="mdfiles/css/mdb.min.css">
+	  	<link rel="stylesheet" href="mdfiles/css/style.css">
+	 	<script src="mdfiles/js/jquery.min.js"></script>
+	 	<script src="mdfiles/js/bootstrap.min.js"></script>	
+		<style>
+		b{
+		color:black;
+		}
+		.h{
+	font-family : "Imprint MT Shadow";
+	font-size : 23px;
+	font-weight : bold;
+	color : #4c054c;
+}
+.t{
+	font-family : "Imprint MT Shadow";
+	font-size : 20px;
+	color:black;
+}
+.msg{
+	font-family : "Imprint MT Shadow";
+	font-size : 20px;
+}
+		</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark aqua-gradient">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto" >
+      <li class="nav-item ">
+        <a class="nav-link" href="create_admin.html"><b>Create Admin</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="create_customer.html"><b>Create Customer</b></a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="view_admin.html"><b> View Admin</b></a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="view_customer.html"><b> View Customer</b></a>
+      </li>
+	  </ul>
+	  </div></nav>
+<div class="container">
+<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+				<center><div class='h'>Create Admin</div>
+				<form action="" method="post" autocomplete="off">
+				<input type="text" name="name" id="uname" class="form-control" placeholder="Name"  style="margin-top:20px;width:270px;" required />
+				<input type="text" name="id" id="uid" class="form-control" placeholder="Id"  style="margin-top:13px;width:270px;" required/>
+				<input type="password" name="pass" id="pass" class="form-control" placeholder="password"  style="margin-top:13px;width:270px;" required/>
+
+				<button type="submit" class="btn btn-#311b92 deep-purple darken-4" value="Add" name="t" id="c" style="margin-top:13px"/><font  color=" #FFFFFF">Submit</font></button></center>
+<br>
+					
+		</div>	</form>	
+
+		<div class="col-sm-4"><br></div>
+	</div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+document.getElementById("c").addEventListener("click",()=>{
+var uid=document.getElementById("uid").value;
+var pass=document.getElementById("pass").value;
+var name=document.getElementById("uname").value;
+$.ajax({
+
+	url:"http://localhost:3000/insertnewadmin",
+	type:"post",
+	data:{userid:uid,password:pass,name:name},
+	dataType:"json"
+	
+}).done((res)=>{
+alert(res);
+})
+
+})
+
+</script>

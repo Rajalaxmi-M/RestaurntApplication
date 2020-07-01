@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<style>
+			input[type=text], select 
+			{
+   				width: 82%;
+    			padding: 8px 10px;
+    			margin: 8px 0;
+    			display: inline-block;
+    			border: 1px solid #ccc;
+    			border-radius: 6px;
+    			box-sizing: border-box;
+			}
+			input[type=password], select 
+			{
+   				width: 82%;
+    			padding: 8px 10px;
+    			margin: 8px 0;
+    			display: inline-block;
+    			border: 1px solid #ccc;
+    			border-radius: 6px;
+    			box-sizing: border-box;
+			}
+			input[type=submit] , input[type=reset]	{
+    			width: 82%;
+    			color: white;
+    			padding: 9px 10px;
+   				margin: 8px 0;
+  				border: none;
+   				cursor: pointer;
+			}								
+		</style>
+ 
+</head>
+	<body style="background-color:#FFFFFF;"><br><br><br>
+		<table align="center">
+			<tr>
+				<th>
+					<img src="Files/logo.jpg" height=150 width=200></img>
+				</th>
+			</tr>
+		</table>
+		<table width="350" height="320" align="center" style="background-color:#aa80ff ;border-radius:10px;">
+			<tr>
+				<td>
+					<center><font size="5" color=" #000000" face="Imprint MT Shadow">Restaurant Application</font><br><br>
+					<form action="" method="post">
+						<input type="text" name="uname" id="uid" placeholder="UserId..." required /><br>
+						<input type="password" name="pw" id="pass" placeholder="Password..." required /><br>
+						
+						<input type="submit" name="login" value="Sign In" onclick="cal()" id="signin" style="background-color: #ef3071;" /><br>
+						<input type="submit" name="res" value="Register" onclick="location.href='register.html'" style="background-color: #19004d;" /><br>
+					</form>
+					
+					</center>
+				</td>
+			</tr>
+		</table>
+	</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+function cal(){
+var uid=document.getElementById("uid").value;
+var pass=document.getElementById("pass").value;
+
+if(uid=='1111'&&pass=='1111')
+{
+window.location.href="head.html";
+}}
+document.getElementById("signin").addEventListener("click",()=>{
+$.ajax({
+	url:"http://localhost:3000/loginuser",
+	type:"post",
+	data:{userid:uid,password:pass},
+	dataType:"json"
+	
+}).done((res)=>{
+console.log(res);
+})
+
+})
+
+</script>
+</html>

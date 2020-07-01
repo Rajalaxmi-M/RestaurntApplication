@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Products</title>
+<center><i><font size="7px">Kappa Chakka Kandhari</i></font></center>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="mdfiles/css/bootstrap.min.css">
+	  	<link rel="stylesheet" href="mdfiles/css/mdb.min.css">
+	  	<link rel="stylesheet" href="mdfiles/css/style.css">
+	 	<script src="mdfiles/js/jquery.min.js"></script>
+	 	<script src="mdfiles/js/bootstrap.min.js"></script>
+	 	
+</head>
+<body>
+<div class="container  ">
+<div class="row"><p align="right"><input type="submit" style="position: absolute; right: 0;" class ="btn btn-dark btn-sm rounded " value="My cart" id="cart" data-toggle="modal" data-target="#basicExampleModal"></p></div>
+<div class="row">
+<div class="col-md-4"><center>
+<div class="row"><img src="Files/k1.jpg" style="width:250px;height:250px;" ></div>
+<div class="row"><span id="name1"><b>Biriyani</b></span></div>
+<div class="row"><span id="price1">250</span></div>
+<div class="row"><input type="number" id="num1" class="form-control" value="0" style="width:40%"></div>
+<div class="row"><button type="submit " id="btn1" class="btn btn-sm btn-#4a148c purple darken-4 rounded cartbut"  style="color:white;">Order now</button></div>
+</div></center>
+<div class="col-md-4"><center>
+<div class="row"><img src="Files/k2.jpg" style="width:250px;height:250px;" ></div>
+<div class="row"><span id="name2"><b>Dosa</b></span></div>
+<div class="row"><span id="price2">100</span></div>
+<div class="row"><input type="number" id="num2" class="form-control" value="0" style="width:40%"></div>
+<div class="row"><button type="submit " id="btn2" class="btn btn-sm btn-#4a148c purple darken-4 rounded cartbut"  style="color:white;">Order now</button></div>
+</div></center>
+<div class="col-md-4"><center>
+<div class="row"><img src="Files/k3.jpg" style="width:250px;height:250px;" ></div>
+<div class="row"><span id="name3"><b>Chappati</b></span></div>
+<div class="row"><span id="price3">200</span></div>
+<div class="row"><input type="number" id="num3" class="form-control" value="0" style="width:40%"></div>
+<div class="row"><button type="submit " id="btn3" class="btn btn-sm btn-#4a148c purple darken-4 rounded cartbut" style="color:white;">Order now</button></div>
+</div></center>
+
+</div>
+</div>
+
+	
+
+<!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-side modal-top-right" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Products in Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	 <p id="empty">No Products in the cart..</p>
+		<table id="items" class="table table-hover">
+		<th>Product</th>
+		<th>Quantity</th>
+		<th>Price</th>
+		</table>
+      </div>
+      <div class="modal-footer">
+        <p id="total"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="cart.js"></script>
+
+</body>
+	
+	

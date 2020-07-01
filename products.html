@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Products</title>
+<center><i><font size="7px"> Restaurants Info</i></font></center>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="mdfiles/css/bootstrap.min.css">
+	  	<link rel="stylesheet" href="mdfiles/css/mdb.min.css">
+	  	<link rel="stylesheet" href="mdfiles/css/style.css">
+	 	<script src="mdfiles/js/jquery.min.js"></script>
+	 	<script src="mdfiles/js/bootstrap.min.js"></script>
+	 	
+</head>
+<body>
+<div class="container  ">
+<div class="row">
+<div class="col-md-4"><center>
+<div class="row"><span id="name1"><b><i><font size="5px">Kappa Chakka Kandhari</b></i></font></span></div>
+<div class="row"><img src="Files/h1.jpg" style="width:250px;height:250px;" ></div>
+<div class="row"><button type="submit " id="btn1" class="btn btn-sm btn-#4a148c purple darken-4 rounded cartbut" onclick="location.href='kapp.html'" style="color:white;">View Menu</button></div>
+</div></center>
+<div class="col-md-4"><center>
+
+<div class="row"><span id="name2"><b><i><font size="5px">ITC Grand Chola Hotel</b></i></font></span></div>
+<div class="row"><img src="Files/h2.jpg" style="width:250px;height:250px;" ></div>
+
+<div class="row"><button type="submit " id="btn2" class="btn btn-sm btn-#4a148c purple darken-4 rounded cartbut" onclick="location.href='itc.html'" style="color:white;">View Menu</button></div>
+</div></center>
+<div class="col-md-4"><center>
+
+<div class="row"><span id="name3"><b><i><font size="5px">Hotel City Tower</b></i></font></span></div>
+<div class="row"><img src="Files/h3.jpg" style="width:250px;height:250px;" ></div>
+
+<div class="row"><button type="submit " id="btn3" class="btn btn-sm btn-#4a148c purple darken-4 rounded cartbut" onclick="location.href='city.html'" style="color:white;">View Menu</button></div>
+</div></center>
+
+</div>
+</div>
+
+	
+
+<!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-side modal-top-right" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Products in Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	 <p id="empty">No Products in the cart..</p>
+		<table id="items" class="table table-hover">
+		<th>Product</th>
+		<th>Quantity</th>
+		<th>Price</th>
+		</table>
+      </div>
+      <div class="modal-footer">
+        <p id="total"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+	
